@@ -4,41 +4,23 @@
 # and their cost
 # a barrel can only hold one fruit type
 
-# Fruit obj
-
-class Fruit:
-    def __init__(self, name, fruit_type):
-        self.name = name
-        self.fruit_type = None
-
-# Barrel obj
-
 class Barrel:
-
-    def __init__(self, type, count):
-        self.fruit_list = []
+    def __init__(self, type_of_fruit, count):
+        self.type_of_fruit = type_of_fruit
+        self.count = count
 
     def add_fruit(self):
-        self.fruit_list.append(Fruit(name))
-        # if options == "":
-        #     self.fruit_count += 1
-        #     print(f"{options} has been added.")
-        # elif self.fruit_type == None:
-        #     self.fruit_type = fruit
-        #     self.fruit_count += 1
-        # else:
-        #     return "Invalid"
+        self.count += 1
+        return f"{self.type_of_fruit} has been added."
     
-    def type_of_fruit(self):
-        for i in self.fruit_list:
-            pass
+    def fruit_type(self):
+        return self.type_of_fruit
     
-    def remove_amt(self):
-        
+    def remove_amt(self, amount=0):
+       self.count -= amount
 
-    
     def reset_barrel(self):
-        pass 
+         self.count == 0 
 
 
 
